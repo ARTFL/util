@@ -10,7 +10,7 @@ import re
 import htmlentitydefs
 
 
-def convert_ents(s):
+def convert(s):
     """Take an input string s, find all things that look like SGML character
     entities, and replace them with the Unicode equivalent.
 
@@ -40,4 +40,3 @@ http://stackoverflow.com/questions/1197981/convert-html-entities-to-ascii-in-pyt
                           unichr(htmlentitydefs.name2codepoint[name]))
     s = s.replace(amp, "&")
     return s
-    
