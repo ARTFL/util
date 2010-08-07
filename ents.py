@@ -6,6 +6,8 @@ import htmlentitydefs
 
 
 def convert_ents(s):
+    """Take an input string s, find all things that look like SGML character
+    entities, and replace them with the Unicode equivalent."""
     matches = re.findall("&#\d+;", s)
     if len(matches) > 0:
         hits = set(matches)
